@@ -9,8 +9,8 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="py-8 bg-muted">
-      <div className="container">
+    <footer className="bg-muted">
+      <div className="container py-8">
         <div className="flex flex-col justify-between sm:items-center md:flex-row">
           <div className="mb-4 md:mb-0">
             <span className="flex items-center text-primary gap-x-1">
@@ -36,12 +36,11 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-8 text-sm sm:text-center text-muted-foreground">
-          <p>
-            &copy; {new Date().getFullYear()} Sweet Delights. All rights
-            reserved.
-          </p>
-        </div>
+      </div>
+      <div className="border-t">
+        <p className="container py-4 text-sm sm:text-center text-muted-foreground">
+          &copy; {new Date().getFullYear()} Sweet Delights. All rights reserved.
+        </p>
       </div>
     </footer>
   );

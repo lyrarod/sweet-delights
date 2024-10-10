@@ -3,9 +3,15 @@ import Image from "next/image";
 const About = () => {
   return (
     <section id="about" className="py-20 bg-muted">
-      <h2 className="pl-4 mx-auto mb-12 text-3xl font-bold border-l-8 text-primary md:text-4xl w-max border-primary">
+      <h2 className="flex flex-col items-center mx-auto mb-12 text-3xl font-bold text-center text-primary md:text-4xl w-max">
         About Us
+        <div className="flex w-1/2 mt-1 mb-10 overflow-hidden rounded">
+          <div className="flex-1 h-2 bg-pink-200"></div>
+          <div className="flex-1 h-2 bg-pink-400"></div>
+          <div className="flex-1 h-2 bg-pink-600"></div>
+        </div>
       </h2>
+
       <div className="container flex flex-col items-center justify-between md:flex-row">
         <div className="mb-10 md:w-1/2 md:mb-0">
           <Image

@@ -18,13 +18,34 @@ const Services = () => {
       description: "Host unforgettable events with our candy catering service.",
       image: "candy_parties.avif",
     },
+    {
+      title: "Candy Subscriptions",
+      description: "Receive a curated box of candies every month.",
+      image: "candy_subscription.avif",
+    },
+    {
+      title: "Corporate Gifts",
+      description: "Impress clients and employees with custom candy packages.",
+      image: "corporate_gifts.avif",
+    },
+    {
+      title: "Candy Parties",
+      description: "Host unforgettable events with our candy catering service.",
+      image: "candy_parties.avif",
+    },
   ];
 
   return (
     <section id="services" className="py-20 bg-muted">
-      <h2 className="pl-4 mx-auto mb-12 text-3xl font-bold text-center border-l-8 text-primary md:text-4xl w-max border-primary">
+      <h2 className="flex flex-col items-center mx-auto mb-12 text-3xl font-bold text-center text-primary md:text-4xl w-max">
         Our Services
+        <div className="flex w-1/2 mt-1 mb-10 overflow-hidden rounded">
+          <div className="flex-1 h-2 bg-pink-200"></div>
+          <div className="flex-1 h-2 bg-pink-400"></div>
+          <div className="flex-1 h-2 bg-pink-600"></div>
+        </div>
       </h2>
+
       <div className="container grid grid-cols-1 gap-8 md:grid-cols-3">
         {servicesList.map((service, index) => (
           <div

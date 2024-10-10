@@ -40,9 +40,15 @@ const Features = () => {
 
   return (
     <section id="features" className="py-20">
-      <h2 className="pl-4 mx-auto mb-12 text-3xl font-bold border-l-8 text-primary md:text-4xl w-max border-primary">
+      <h2 className="flex flex-col items-center mx-auto mb-12 text-3xl font-bold text-center text-primary md:text-4xl w-max">
         Our Features
+        <div className="flex w-1/2 mt-1 mb-10 overflow-hidden rounded">
+          <div className="flex-1 h-2 bg-pink-200"></div>
+          <div className="flex-1 h-2 bg-pink-400"></div>
+          <div className="flex-1 h-2 bg-pink-600"></div>
+        </div>
       </h2>
+
       <div className="container grid grid-cols-1 gap-8 md:grid-cols-3">
         {featuresList.map((feature, index) => (
           <div

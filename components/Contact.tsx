@@ -41,9 +41,15 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20">
-      <h2 className="pl-4 mx-auto mb-12 text-3xl font-bold text-center border-l-8 text-primary md:text-4xl w-max border-primary">
+      <h2 className="flex flex-col items-center mx-auto mb-12 text-3xl font-bold text-center text-primary md:text-4xl w-max">
         Contact Us
+        <div className="flex w-1/2 mt-1 mb-10 overflow-hidden rounded">
+          <div className="flex-1 h-2 bg-pink-200"></div>
+          <div className="flex-1 h-2 bg-pink-400"></div>
+          <div className="flex-1 h-2 bg-pink-600"></div>
+        </div>
       </h2>
+
       <div className="container grid grid-cols-1 gap-8 md:grid-cols-2">
         <div className="space-y-6">
           <h3 className="text-2xl font-semibold text-primary">Get in Touch</h3>
@@ -65,11 +71,11 @@ const Contact = () => {
           </div>
         </div>
         <div>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            onSubmit={handleSubmit}
+            className="p-8 space-y-6 rounded-lg shadow-md bg-muted"
+          >
             <div>
-              {/* <label htmlFor="name" className="block text-sm font-medium">
-                Name
-              </label> */}
               <Input
                 type="text"
                 id="name"
@@ -82,9 +88,6 @@ const Contact = () => {
               />
             </div>
             <div>
-              {/* <label htmlFor="email" className="block text-sm font-medium">
-                Email
-              </label> */}
               <Input
                 type="email"
                 id="email"
@@ -97,9 +100,6 @@ const Contact = () => {
               />
             </div>
             <div>
-              {/* <label htmlFor="message" className="block text-sm font-medium">
-                Message
-              </label> */}
               <Textarea
                 id="message"
                 name="message"

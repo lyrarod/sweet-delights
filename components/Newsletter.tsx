@@ -6,7 +6,7 @@ export function Newsletter() {
   return (
     <section className="flex py-20 bg-secondary bg-[url('/inspiration-geometry.png')] bg-fixed">
       <div className="container">
-        <div className="flex flex-col items-center justify-center w-full max-w-md gap-6 p-8 mx-auto rounded-lg shadow-md bg-muted">
+        <div className="flex flex-col items-center justify-center w-full max-w-screen-sm gap-6 p-8 mx-auto rounded-lg shadow-md bg-muted">
           <MailsIcon className="size-12 text-primary" />
           <h3 className="text-lg sm:text-xl text-muted-foreground">
             Subscribe to Newsletter

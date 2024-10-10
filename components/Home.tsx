@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="py-16 sm:py-20 bg-[url('/inspiration-geometry.png')] bg-fixed "
+      className="py-16 sm:py-20 bg-[url('/inspiration-geometry.png')] bg-fixed"
     >
-      <div className="container flex flex-col items-center justify-between md:flex-row ">
+      <div className="container flex flex-col items-center justify-between md:flex-row">
         <div className="mb-10 md:w-1/2 md:mb-0">
           <h1 className="mb-4 text-4xl font-bold md:text-6xl drop-shadow">
             Welcome to <span className="text-primary">Sweet Delights</span>
