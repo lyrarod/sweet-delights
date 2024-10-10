@@ -13,7 +13,7 @@ const About = () => {
             alt="About Image"
             width={600}
             height={400}
-            className="rounded-lg shadow-xl"
+            className="rounded-lg shadow-md"
           />
         </div>
         <div className="md:w-1/2 md:pl-10 text-muted-foreground">

@@ -14,8 +14,8 @@ const Footer = () => {
         <div className="flex flex-col justify-between sm:items-center md:flex-row">
           <div className="mb-4 md:mb-0">
             <span className="flex items-center text-primary gap-x-1">
-              <CandyIcon className="size-6" />{" "}
-              <h3 className="text-xl font-bold ">Sweet Delights</h3>
+              <CandyIcon className="" />{" "}
+              <h3 className="font-bold ">Sweet Delights</h3>
             </span>
             <p className="mt-2 text-sm">
               Bringing joy through delicious candies since 2000
@@ -36,7 +36,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="mt-8 text-sm text-center text-muted-foreground">
+        <div className="mt-8 text-sm sm:text-center text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()} Sweet Delights. All rights
             reserved.

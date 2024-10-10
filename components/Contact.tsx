@@ -67,9 +67,9 @@ const Contact = () => {
         <div>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium">
+              {/* <label htmlFor="name" className="block text-sm font-medium">
                 Name
-              </label>
+              </label> */}
               <Input
                 type="text"
                 id="name"
@@ -77,13 +77,14 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="mt-1"
+                className="mt-1 placeholder:italic"
+                placeholder="Enter your Name"
               />
             </div>
             <div>
-              <label htmlFor="email" className="block text-sm font-medium">
+              {/* <label htmlFor="email" className="block text-sm font-medium">
                 Email
-              </label>
+              </label> */}
               <Input
                 type="email"
                 id="email"
@@ -91,25 +92,27 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="mt-1"
+                className="mt-1 placeholder:italic"
+                placeholder="Enter your E-mail"
               />
             </div>
             <div>
-              <label htmlFor="message" className="block text-sm font-medium">
+              {/* <label htmlFor="message" className="block text-sm font-medium">
                 Message
-              </label>
+              </label> */}
               <Textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="mt-1"
+                className="mt-1 resize-none placeholder:italic"
                 rows={4}
+                placeholder="Type your Message"
               />
             </div>
             <div>
-              <Button type="submit" className="w-full">
+              <Button size={"default"} className="w-full">
                 Send Message
               </Button>
             </div>

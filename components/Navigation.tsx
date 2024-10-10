@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const toggleTheme = () => {
-    if (theme === "dark") {
+    if (resolvedTheme === "dark") {
       setTheme("light");
     } else {
       setTheme("dark");
@@ -40,9 +40,10 @@ const Navigation = () => {
           <div className="flex items-center">
             <Link
               href="/"
-              className="flex items-center text-xl font-bold sm:text-2xl gap-x-2 text-primary"
+              className="flex items-center font-bold gap-x-2 text-primary lg:text-xl"
             >
-              <CandyIcon className="sm:size-8" /> <span>Sweet Delights</span>
+              <CandyIcon className="sm:size-8 md:size-6" />{" "}
+              <span>Sweet Delights</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -64,7 +65,7 @@ const Navigation = () => {
               })}
               {mounted && (
                 <Button onClick={toggleTheme} variant="ghost" size="icon">
-                  {theme === "dark" ? <Sun /> : <Moon />}
+                  {resolvedTheme === "dark" ? <Sun /> : <Moon />}
                 </Button>
               )}
             </div>
@@ -77,7 +78,7 @@ const Navigation = () => {
                 size="icon"
                 className="mr-2"
               >
-                {theme === "dark" ? <Sun /> : <Moon />}
+                {resolvedTheme === "dark" ? <Sun /> : <Moon />}
               </Button>
             )}
             <Button onClick={toggleMenu} size={"icon"} variant={"ghost"}>
