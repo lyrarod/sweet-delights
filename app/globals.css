@@ -54,4 +54,7 @@
   body {
     @apply antialiased bg-background text-foreground;
   }
+  .active_class {
+    @apply text-primary transition;
+  }
 }

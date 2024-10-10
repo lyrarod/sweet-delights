@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
+
 import { Menu, X, Sun, Moon, CandyIcon } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -26,11 +28,11 @@ const Navigation = () => {
   };
 
   const menuItems = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About Us" },
-    { href: "#features", label: "Features" },
-    { href: "#services", label: "Services" },
-    { href: "#contact", label: "Contact" },
+    { href: "home", label: "Home" },
+    { href: "about", label: "About Us" },
+    { href: "features", label: "Features" },
+    { href: "services", label: "Services" },
+    { href: "contact", label: "Contact" },
   ];
 
   return (
@@ -39,7 +41,9 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link
-              href="/"
+              to="home"
+              href="#"
+              offset={-65}
               className="flex items-center font-bold gap-x-2 text-primary lg:text-xl"
             >
               <CandyIcon className="sm:size-8 md:size-6" />{" "}
@@ -49,17 +53,30 @@ const Navigation = () => {
           <div className="hidden md:block">
             <div className="flex items-center space-x-4">
               {menuItems.map((item, index) => {
-                return item.label !== "Contact" ? (
+                return item.href !== "contact" ? (
                   <Link
                     key={index}
-                    href={item.href}
-                    className="px-3 py-2 text-sm font-medium rounded-md hover:text-primary"
+                    to={item.href}
+                    href={"#"}
+                    spy={true}
+                    hashSpy={true}
+                    offset={item.href === "home" ? -65 : -63}
+                    activeClass="active_class"
+                    className="px-3 py-2 text-sm font-medium hover:active_class"
                   >
                     {item.label}
                   </Link>
                 ) : (
                   <Button key={index} asChild size={"sm"}>
-                    <Link href={item.href}>{item.label}</Link>
+                    <Link
+                      to={item.href}
+                      href="#"
+                      spy={true}
+                      hashSpy={true}
+                      offset={-63}
+                    >
+                      {item.label}
+                    </Link>
                   </Button>
                 );
               })}
@@ -98,7 +115,12 @@ const Navigation = () => {
             {menuItems.map((item, index) => (
               <Link
                 key={index}
-                href={item.href}
+                to={item.href}
+                href={"#"}
+                spy={true}
+                hashSpy={true}
+                offset={-265}
+                activeClass="active_class"
                 className="block p-2 text-center"
                 onClick={toggleMenu}
               >
